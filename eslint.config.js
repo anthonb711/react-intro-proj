@@ -12,7 +12,7 @@ export default [
       ecmaVersion: 2020,
       globals: globals.browser,
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 6,
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
       },
@@ -22,6 +22,9 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+    },
+    env: {
+        "es6": true
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -33,6 +36,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      "strict": "off" // Disables the 'use strict' rule
     },
   },
 ]
